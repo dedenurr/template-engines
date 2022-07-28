@@ -1,17 +1,12 @@
-const path = require('path');
-
 const express = require('express');
-
-const usernData = require('./users');
-
+const userData = require('./users');
 const router = express.Router();
 
 router.get('/', (req, res, next) => {
-  const users = usernData.users;
+  const users = userData.users;
   res.render('index', {
     userss: users,
-    pageTitle: 'Shop Zahra',
+    pageTitle: 'Add - User',
   });
 });
-
 module.exports = router;

@@ -1,26 +1,28 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const port = 3000;
-
+const port = 3001;
 const app = express();
 
-//register view engine in app
-
+//setting template engine
 app.set('view engine', 'ejs');
 app.set('views', 'views');
 
-const indexRoutes = require('./routes');
+//call router
+const indexRouter = require('./routes/index');
 const userData = require('./routes/users');
 
+// use body parser
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use(userData.routes);
-app.use(indexRoutes);
-
+// use router
+app.use(userData.router);
+app.use(indexRouter);
 app.use((req, res, next) => {
-  res.status(404).render('404', { pageTitle: 'Page Not Found' });
+  res.status(404).render('404', {
+    pageTitle: 'page not found',
+  });
 });
 
 app.listen(port, () => {
-  console.log(`the server listen http://localhost:${port}`);
+  console.log(`the server listen on http://localhost:${port}`);
 });

@@ -1,20 +1,16 @@
-<%- include('includes/head.ejs') %>
-</head>
+<%- include('includes/head.ejs')  %>
 
-<body>
-    <%- include('includes/navigation.ejs') %>
-
-    <main>
-        <% if (userss.length > 0) { %>
-        <div>
-            <% for (let users of userss){ %>
-
-            <h1><%= users.nama  %> </h1>
-
-            <% } %>
-        </div>
-        <% } else { %>
-        <h1>No Products Found!</h1>
+<%- include('includes/nav.ejs')  %>
+<main>
+    <% if (userss.length >0){  %>
+    <h1>Lis Of users</h1>
+    <ul>
+        <% for (let use of userss){ %>
+        <li><%= use.nama  %> </li>
         <% } %>
-    </main>
-    <%- include('includes/end.ejs') %>
+    </ul>
+    <% } else { %>
+    <h1>Not Found Users</h1>
+    <% } %>
+</main>
+<%- include('includes/end.ejs')  %>
