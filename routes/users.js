@@ -8,7 +8,6 @@ const users = [];
 router.get('/users', (req, res, next) => {
   res.render('users', {
     pageTitle: 'Add User',
-    path: '/users',
   });
 });
 
