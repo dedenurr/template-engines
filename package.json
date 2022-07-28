@@ -1,0 +1,31 @@
+{
+  "name": "template-engines",
+  "version": "1.0.0",
+  "description": "EJS template engines",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dedenurr/template-engines.git"
+  },
+  "keywords": [
+    "EJS",
+    "Node.JS",
+    "Javascript"
+  ],
+  "author": "Dede Nurrahman",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dedenurr/template-engines/issues"
+  },
+  "homepage": "https://github.com/dedenurr/template-engines#readme",
+  "dependencies": {
+    "body-parser": "^1.20.0",
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "nodemon": "^2.0.19"
+  }
+}
